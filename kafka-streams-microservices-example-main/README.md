@@ -10,8 +10,8 @@
 
 ## 
 - Accesssing Kafka through Conduktor (download it https://www.conduktor.io/get-started/desktop/ and create account free).
-- Configure the desktop connection (Cluster Name: local, Bootstrap Server: localhost:9092, Zookeeper: localhost:2123), test the connect and save
--
+- Conduktor Configure the desktop connection (Cluster Name: local, Bootstrap Server: localhost:9092, Zookeeper: localhost:2123), test the connect and save
+- ![Conductor-Kafa-UI](Conductor-Kafa-UI.png)
 
 ## Microservices
 - 'domain-crawler' - uses Spring Kafka (http://localhost:8080/domain/lookup/facebook) as Producer
