@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "758bc9a4-5726-4f8c-b318-4141e37f3db2",
+		"name": "Springboot2.7-Kafka-Streaming",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33936986"
+	},
+	"item": [
+		{
+			"name": "Publish Kafka Data (from external API)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/domain/lookup/facebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"domain",
+						"lookup",
+						"facebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consumed Kafka Data (from db)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/domains/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"domains",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
