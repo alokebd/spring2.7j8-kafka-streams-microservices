@@ -14,16 +14,15 @@ import com.vision.domainservice.service.DomainConsumerService;
 public class DomainConsumer {
 	@Autowired
 	private DomainConsumerService domainConsumerService;
-	
-	//@KafkaListener(topics = "web-domains", groupId = "domainService-applicationId")
+
+	//@KafkaListener(topics = "web-domains", groupId ="domainService-applicationId")
 	@KafkaListener(topics = "web-domains")
-	public void listener(ConsumerRecord<String, String> consumerRecord) throws JsonProcessingException{
-		 //System.out.println("Received domain key:" + consumerRecord.key());
-	     //System.out.println("Received domain value: "+ consumerRecord.value());
-	     ObjectMapper objectMapper = new ObjectMapper();
-	     DomainEntity domainEntity = objectMapper.readValue(consumerRecord.value(), DomainEntity.class);
-	     domainConsumerService.process(domainEntity);
+	public void listener(ConsumerRecord<String, String> consumerRecord) throws JsonProcessingException {
+		// System.out.println("Received domain key:" + consumerRecord.key());
+		// System.out.println("Received domain value: "+ consumerRecord.value());
+		ObjectMapper objectMapper = new ObjectMapper();
+		DomainEntity domainEntity = objectMapper.readValue(consumerRecord.value(), DomainEntity.class);
+		domainConsumerService.process(domainEntity);
 	}
-	
 
 }

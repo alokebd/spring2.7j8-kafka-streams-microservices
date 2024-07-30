@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.vision.domainservice.dto.DomainDto;
 import com.vision.domainservice.entity.DomainEntity;
 import com.vision.domainservice.repository.DomainRepository;
@@ -16,6 +15,7 @@ import com.vision.domainservice.repository.DomainRepository;
 public class DomainPersistanceService {
     @Autowired
 	private DomainRepository domainRepository;
+    
     
     public void save(DomainEntity entity) {
     	this.domainRepository.save(entity);
@@ -31,4 +31,6 @@ public class DomainPersistanceService {
     	}
 		return dtoList;
     }
+    
+    
 }

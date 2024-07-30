@@ -1,14 +1,19 @@
-package com.vision.domainservice.entity;
+package com.vision.domainprocessor.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "domains")
-public class DomainEntity implements Serializable {
+@Table(name = "web_domains")
+public class WebDomainEntity implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id

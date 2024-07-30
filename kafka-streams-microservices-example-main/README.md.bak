@@ -17,30 +17,6 @@
 - 'domain-crawler' - uses Spring Kafka (http://localhost:8080/domain/lookup/facebook) as Producer
 - 'domain-processor' - uses Spring Cloud Stream with Kafka Streams binder as Consumer.
 - 'domain-service' - uses Spring Cloud Stream with Kafka Streams binder as Consumer. Consumer Listner added to save data in MySQL db. To cehck all domain list (http://localhost:8082/api/domains/v1).
-- Example of json from DB  where Country has value 
-[
-    {
-        "domain": "facebook-quiz.com",
-        "create_date": "2024-07-26T02:46:38.510583",
-        "update_date": "2024-07-26T02:46:38.510586",
-        "country": "DK",
-        "dead": false,
-        "mx": null,
-        "a": null,
-        "ns": null,
-        "cname": null
-    },
-    {
-        "domain": "facebook-link.com",
-        "create_date": "2024-07-21T16:26:38.581278",
-        "update_date": "2024-07-21T16:26:38.581280",
-        "country": "SG",
-        "dead": false,
-        "mx": null,
-        "a": null,
-        "ns": null,
-        "cname": null
-    }
-]
+
 ## Architecture
 ![architecture](architecture.png)

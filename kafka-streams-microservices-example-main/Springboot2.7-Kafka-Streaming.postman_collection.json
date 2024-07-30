@@ -47,6 +47,27 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Consumed Kafka Data (from DB where County is valid)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/domains/v2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"domains",
+						"v2"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
